@@ -8,10 +8,11 @@
     "com.bovinelabs.core": "1.4.5"
   },
   "keywords": [
-    "Sheet", 
-	"Excel"
+    "Sheet",
+    "Excel"
   ],
   "author": {
     "name": "BovineLabs"
-  }
+  },
+  "_fingerprint": "b7ace660481870baa350364bdae33c51b0c806c1"
 }
