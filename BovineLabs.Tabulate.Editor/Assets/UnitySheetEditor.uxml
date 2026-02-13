@@ -1,0 +1,60 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.bovinelabs.tabulate/BovineLabs.Tabulate.Editor/Assets/UnitySheetEditor.uss" />
+
+    <ui:VisualElement name="root" class="sheet-editor-root">
+        <!-- Toolbar -->
+        <uie:Toolbar name="main-toolbar" class="action-toolbar">
+            <uie:ToolbarButton name="new-button" text="New" tooltip="Create new Sheet Definition" />
+            <uie:ObjectField name="sheet-definition-field" type="BovineLabs.Tabulate.Editor.Core.SheetDefinition, BovineLabs.Tabulate.Editor" tooltip="Sheet Definition" />
+            <uie:ToolbarSearchField name="search-field" tooltip="Search objects by name" class="toolbar-search-field" />
+            <uie:ToolbarSpacer />
+            <uie:ToolbarButton name="refresh-button" text="↻" tooltip="Refresh sheet data" />
+            <uie:ToolbarMenu name="settings-menu" tooltip="Settings" variant="Popup" class="toolbar-settings-menu" />
+        </uie:Toolbar>
+
+        <ui:VisualElement name="no-sheet-message" class="no-sheet-message">
+            <ui:Label text="No sheet definition loaded. Create a new Sheet Definition asset to get started." class="message-label" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="sheet-content" class="sheet-content-section">
+            <ui:VisualElement name="main-content-container" class="main-content-container">
+                <!-- Main Sheet Area -->
+                <ui:VisualElement name="sheet-main-area" class="sheet-main-area">/
+                    <ui:MultiColumnListView name="sheet-list-view" class="sheet-list-view" />
+
+                    <ui:VisualElement name="no-data-message" class="no-data-message">
+                        <ui:Label text="No objects found for the current sheet configuration." class="no-data-label" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <!-- Variables Sidebar -->
+                <ui:VisualElement name="variables-sidebar" class="variables-sidebar variables-sidebar--collapsed">
+                    <ui:VisualElement name="variables-header" class="variables-header">
+                        <ui:Button name="variables-toggle-button" text="◀" class="variables-toggle-button" />
+                        <ui:Label text="Variables" class="variables-title" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="variables-content" class="variables-content">
+                        <ui:ScrollView name="variables-scroll" class="variables-scroll">
+                            <ui:VisualElement name="variables-list" class="variables-list">
+                                <!-- Variables will be populated dynamically -->
+                            </ui:VisualElement>
+                        </ui:ScrollView>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Error Summary Panel (now above status bar) -->
+        <ui:VisualElement name="error-summary-panel" class="error-summary-panel" />
+
+        <!-- Combined Status Bar -->
+        <ui:VisualElement name="status-bar" class="sheet-editor-status-bar">
+            <ui:VisualElement name="error-status-container" class="error-status-container">
+                <ui:VisualElement name="error-status-icon" class="error-status-icon" />
+                <ui:Label name="error-status-label" text="" class="error-status-label" />
+            </ui:VisualElement>
+            <ui:VisualElement name="status-spacer" class="status-spacer" />
+            <ui:Label name="status-label" text="Ready" class="status-label" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

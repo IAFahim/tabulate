@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="variable-item" class="variable-item">
+        <ui:VisualElement name="variable-header" class="variable-header">
+            <ui:Label text="V1" display-tooltip-when-elided="true" name="variable-id" class="variable-id" />
+            <ui:Label text="Variable Name" display-tooltip-when-elided="true" name="variable-name" class="variable-name" />
+            <ui:Label text="String" display-tooltip-when-elided="true" name="variable-type" class="variable-type" />
+        </ui:VisualElement>
+        <ui:VisualElement name="variable-value-container" class="variable-value-container">
+            <ui:VisualElement name="variable-value-field" class="variable-value-field" />
+        </ui:VisualElement>
+        <ui:VisualElement name="variable-display-container" class="variable-display-container">
+            <ui:Label display-tooltip-when-elided="true" name="variable-value-label" class="variable-value-label" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

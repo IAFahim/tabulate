@@ -1,0 +1,83 @@
+.error-display {
+}
+
+.error-tooltip-container {
+    background-color: rgba(51, 51, 51, 0.95);
+    border-width: 1px;
+    border-color: rgb(102, 102, 102);
+    padding: 8px;
+    border-radius: 4px;
+    width: auto;
+    height: auto;
+    max-width: 400px;
+}
+
+.error-header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.error-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+.error-title {
+    font-size: 12px;
+    -unity-font-style: bold;
+    color: rgb(255, 102, 102); /* Light red like main spreadsheet */
+    flex-grow: 1;
+    white-space: normal;
+}
+
+.error-content {
+}
+
+.details-section {
+    margin-top: 4px;
+}
+
+.details-header {
+    font-size: 11px;
+    -unity-font-style: bold;
+    margin-bottom: 2px;
+    color: rgb(230, 230, 230);
+}
+
+.details-text {
+    font-size: 11px;
+    white-space: normal;
+    margin-left: 10px;
+    color: rgb(200, 200, 200);
+}
+
+.suggestion-section {
+    margin-top: 8px;
+}
+
+.suggestion-header {
+    font-size: 11px;
+    -unity-font-style: bold;
+    margin-bottom: 2px;
+    color: rgb(230, 230, 230);
+}
+
+.suggestion-text {
+    font-size: 11px;
+    white-space: normal;
+    margin-left: 10px;
+    color: rgb(173, 216, 230); /* Light blue for suggestions */
+}
+
+.location-section {
+    margin-top: 8px;
+}
+
+.location-text {
+    font-size: 10px;
+    margin-left: 10px;
+    color: rgb(153, 153, 153);
+    white-space: normal;
+}

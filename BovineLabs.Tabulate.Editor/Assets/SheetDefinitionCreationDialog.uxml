@@ -1,0 +1,35 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.bovinelabs.tabulate/BovineLabs.Tabulate.Editor/Assets/SheetDefinitionCreationDialog.uss" />
+
+    <ui:VisualElement name="root" class="creation-dialog-root">
+        <ui:Label text="Create New Sheet Definition" name="title-label" class="title-label" />
+
+        <ui:VisualElement name="sheet-type-container" class="field-container">
+            <ui:Label text="Sheet Type:" class="field-label" />
+            <uie:EnumField name="sheet-type-field" class="field-input" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="asset-mode-container" class="field-container">
+            <ui:Label text="Asset Management:" class="field-label" />
+            <ui:VisualElement class="field-input" style="flex-direction: row; align-items: center; flex-grow: 1;">
+                <uie:EnumField name="asset-mode-field" style="flex-grow: 1;" />
+                <ui:Button name="mode-help-button" text="?" class="help-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="custom-search-container" class="field-container">
+            <ui:Label text="Search String:" class="field-label" />
+            <ui:VisualElement class="field-input" style="flex-direction: row; align-items: center; flex-grow: 1;">
+                <ui:TextField name="custom-search-field" style="flex-grow: 1;" />
+                <ui:Button name="search-help-button" text="i" class="search-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:Label text="The Sheet Type cannot be changed after creation. Asset management mode can be changed later." name="description-label" class="description-label" />
+
+        <ui:VisualElement name="button-container" class="button-container">
+            <ui:Button text="Cancel" name="cancel-button" class="dialog-button cancel-button" />
+            <ui:Button text="Create" name="create-button" class="dialog-button create-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

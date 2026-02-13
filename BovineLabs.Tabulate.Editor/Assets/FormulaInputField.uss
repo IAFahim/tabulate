@@ -1,0 +1,109 @@
+/* Formula Input Field Styles */
+
+/* Root container */
+.formula-input-root {
+    flex-direction: column;
+    min-height: 60px;
+}
+
+/* Input container */
+.formula-input-container {
+    position: relative;
+    flex-grow: 1;
+    min-height: 40px;
+}
+
+/* Formula text field */
+.formula-text-field {
+    min-height: 40px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.formula-text-field--multiline {
+    white-space: normal;
+}
+
+/* Syntax highlighting overlay */
+.formula-highlight-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.formula-highlight-element {
+    position: absolute;
+    height: 16px;
+    border-bottom-width: 1px;
+}
+
+.formula-highlight--valid {
+    background-color: rgba(0, 255, 0, 0.2);
+    border-bottom-color: #00FF00;
+}
+
+.formula-highlight--invalid {
+    background-color: rgba(255, 0, 0, 0.2);
+    border-bottom-color: #FF0000;
+}
+
+/* Validation states */
+.formula-input--invalid {
+    border-color: #FF0000;
+    border-width: 2px;
+    background-color: rgba(255, 0, 0, 0.05);
+}
+
+.formula-input--warning {
+    border-color: #FFA500;
+    border-width: 1px;
+    background-color: rgba(255, 165, 0, 0.05);
+}
+
+/* Validation indicator */
+.formula-validation-indicator {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4px;
+    display: none;
+}
+
+.formula-validation-indicator--visible {
+    display: flex;
+}
+
+.formula-validation-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-size: contain;
+    flex-shrink: 0;
+}
+
+.formula-validation-icon--error {
+    background-image: resource('console.erroricon');
+}
+
+.formula-validation-icon--warning {
+    background-image: resource('console.warnicon');
+}
+
+.formula-validation-label {
+    font-size: 11px;
+    white-space: normal;
+    flex-grow: 1;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.formula-validation-label--error {
+    color: #FF4444;
+}
+
+.formula-validation-label--warning {
+    color: #FFA500;
+}

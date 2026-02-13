@@ -1,0 +1,50 @@
+.variable-item {
+    margin-bottom: 12px;
+}
+
+.variable-header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.variable-id {
+    font-size: 11px;
+    -unity-font-style: bold;
+    color: rgb(173, 216, 230); /* Light blue for ID */
+    margin-right: 8px;
+    min-width: 30px;
+}
+
+.variable-name {
+    font-size: 12px;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    flex-grow: 1;
+    margin-right: 8px;
+}
+
+.variable-type {
+    font-size: 10px;
+    color: rgb(169, 169, 169);
+    margin-right: 8px;
+}
+
+.variable-value-container {
+    margin-left: 10px;
+    margin-bottom: 8px;
+}
+
+.variable-value-field {
+    flex-grow: 1;
+}
+
+.variable-display-container {
+    margin-left: 10px;
+}
+
+.variable-value-label {
+    font-size: 11px;
+    color: rgb(144, 238, 144); /* Light green for calculated values */
+    -unity-font-style: italic;
+}

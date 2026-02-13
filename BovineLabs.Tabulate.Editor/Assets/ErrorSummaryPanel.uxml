@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.bovinelabs.tabulate/BovineLabs.Tabulate.Editor/Assets/ErrorSummaryPanel.uss" />
+    
+    <!-- Content Section -->
+    <ui:VisualElement name="error-summary-content" class="error-summary-content">
+        <ui:ScrollView name="error-list" class="error-summary-list">
+            <!-- Error items will be populated programmatically -->
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

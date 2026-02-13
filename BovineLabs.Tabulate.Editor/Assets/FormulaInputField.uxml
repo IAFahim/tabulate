@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.bovinelabs.tabulate/BovineLabs.Tabulate.Editor/Assets/FormulaInputField.uss" />
+    
+    <ui:VisualElement name="formula-input-root" class="formula-input-root">
+        <!-- Main Input Container -->
+        <ui:VisualElement name="input-container" class="formula-input-container">
+            <ui:TextField name="formula-text-field" label="Formula" multiline="true" class="formula-text-field formula-text-field--multiline" />
+            <ui:VisualElement name="highlight-container" class="formula-highlight-container" />
+        </ui:VisualElement>
+        
+        <!-- Validation Indicator -->
+        <ui:VisualElement name="validation-indicator" class="formula-validation-indicator">
+            <ui:VisualElement name="validation-icon" class="formula-validation-icon" />
+            <ui:Label name="validation-label" text="" class="formula-validation-label" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

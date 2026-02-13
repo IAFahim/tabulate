@@ -1,0 +1,105 @@
+/* Quick Formula Dialog Styles */
+
+/* Root container */
+.quick-formula-root {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-direction: column;
+    min-height: 300px;
+}
+
+/* Title section */
+.quick-formula-title {
+    font-size: 16px;
+    -unity-font-style: bold;
+    margin-bottom: 10px;
+    white-space: normal;
+}
+
+/* Description section */
+.quick-formula-description {
+    white-space: normal;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Formula input container */
+.quick-formula-input-container {
+    margin-bottom: 15px;
+    min-height: 60px;
+}
+
+/* Preview section */
+.quick-formula-preview-section {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.quick-formula-preview-title {
+    -unity-font-style: bold;
+    margin-bottom: 5px;
+}
+
+.quick-formula-preview-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 100px;
+    flex-grow: 1;
+}
+
+.quick-formula-preview-empty {
+    color: rgba(255, 255, 255, 0.5);
+    -unity-font-style: italic;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.quick-formula-preview-error {
+    color: #FF4444;
+    -unity-font-style: bold;
+}
+
+.quick-formula-preview-row {
+    margin-bottom: 2px;
+    white-space: normal;
+}
+
+.quick-formula-preview-more {
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 5px;
+    -unity-font-style: italic;
+}
+
+/* Button container */
+.quick-formula-button-container {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 15px;
+    flex-shrink: 0;
+}
+
+.quick-formula-button {
+    min-width: 80px;
+    height: 28px;
+}
+
+.quick-formula-cancel-button {
+    margin-right: 10px;
+}
+
+.quick-formula-apply-button {
+    /* Default button styling */
+}
+
+.quick-formula-apply-button:disabled {
+    opacity: 0.5;
+}

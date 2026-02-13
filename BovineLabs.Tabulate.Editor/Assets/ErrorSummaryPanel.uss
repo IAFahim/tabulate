@@ -1,0 +1,82 @@
+/* Error Summary Panel Styles */
+
+/* Root panel */
+.error-summary-panel {
+    background-color: rgba(50, 50, 50, 0.95); /* More visible dark background */
+    border-top-width: 2px;
+    border-color: rgba(255, 100, 100, 0.6); /* Slightly red border to indicate errors */
+    padding: 8px;
+    max-height: 100px;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+/* Content section */
+.error-summary-content {
+    flex-grow: 1;
+    overflow: hidden;
+    min-height: 0px;
+}
+
+.error-summary-list {
+    flex-grow: 1;
+}
+
+/* Error items - improved styling to match ErrorTooltipDrawer */
+.error-summary-item {
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 6px;
+    margin: 1px 0;
+    cursor: link;
+    border-radius: 3px;
+    transition-duration: 0.1s;
+    transition-property: background-color;
+}
+
+.error-summary-item:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
+/* Enhanced icon styling */
+.error-summary-item-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+    flex-shrink: 0;
+    background-size: contain;
+    cursor: link;
+}
+
+.error-summary-item-icon:hover {
+    opacity: 0.8;
+}
+
+.error-summary-item-icon--warning {
+    background-image: resource('console.warnicon');
+}
+
+.error-summary-item-icon--error {
+    background-image: resource('console.erroricon');
+}
+
+.error-summary-item-icon--critical {
+    background-image: resource('console.erroricon');
+}
+
+/* Enhanced text styling */
+.error-summary-item-text {
+    flex-grow: 1;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 11px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: link;
+    padding: 1px 0;
+}
+
+.error-summary-item-text:hover {
+    color: rgba(255, 255, 255, 1.0);
+}

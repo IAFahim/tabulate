@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="error-display" class="error-display">
+        <ui:VisualElement name="error-header" class="error-header">
+            <ui:VisualElement name="error-icon" class="error-icon" />
+            <ui:Label text="Error: " display-tooltip-when-elided="true" name="error-title" class="error-title" />
+        </ui:VisualElement>
+        <ui:VisualElement name="error-content" class="error-content">
+            <ui:VisualElement name="details-section" class="details-section">
+                <ui:Label text="Details:" display-tooltip-when-elided="true" name="details-header" class="details-header" />
+                <ui:Label display-tooltip-when-elided="true" name="details-text" class="details-text" />
+            </ui:VisualElement>
+            <ui:VisualElement name="suggestion-section" class="suggestion-section">
+                <ui:Label text="Suggestion:" display-tooltip-when-elided="true" name="suggestion-header" class="suggestion-header" />
+                <ui:Label display-tooltip-when-elided="true" name="suggestion-text" class="suggestion-text" />
+            </ui:VisualElement>
+            <ui:VisualElement name="location-section" class="location-section">
+                <ui:Label display-tooltip-when-elided="true" name="location-text" class="location-text" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

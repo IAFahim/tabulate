@@ -1,0 +1,17 @@
+{
+  "name": "com.bovinelabs.tabulate",
+  "description": "Editor Sheets",
+  "version": "0.1.0",
+  "unity": "6000.0",
+  "displayName": "BovineLabs Tabulate",
+  "dependencies": {
+    "com.bovinelabs.core": "1.4.5"
+  },
+  "keywords": [
+    "Sheet", 
+	"Excel"
+  ],
+  "author": {
+    "name": "BovineLabs"
+  }
+}

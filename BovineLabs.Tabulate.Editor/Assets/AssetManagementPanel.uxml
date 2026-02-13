@@ -1,0 +1,49 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.bovinelabs.tabulate/BovineLabs.Tabulate.Editor/Assets/AssetManagementPanel.uss" />
+
+    <ui:VisualElement name="asset-management-root" class="asset-management-panel">
+        <!-- Drop Overlay -->
+        <ui:VisualElement name="drop-overlay" class="asset-drop-overlay">
+            <ui:Label text="Drop assets here to add to sheet" class="asset-drop-label" />
+        </ui:VisualElement>
+
+        <!-- Header Section -->
+        <ui:VisualElement name="header-container" class="asset-header-container">
+            <ui:Label text="Managed Assets" name="panel-title" class="asset-panel-title" />
+            <ui:Label text="Assets: 0" name="asset-count-label" class="asset-count-label" />
+        </ui:VisualElement>
+
+        <!-- Asset Management Mode Section -->
+        <ui:VisualElement name="mode-container" class="asset-mode-container">
+            <ui:Label text="Asset Management Mode:" class="asset-mode-label" />
+            <uie:EnumField name="asset-mode-field" class="asset-mode-field" />
+        </ui:VisualElement>
+
+        <!-- Custom Search Section -->
+        <ui:VisualElement name="custom-search-container" class="asset-custom-search-container">
+            <ui:Label text="Search String:" class="asset-search-label" />
+            <ui:VisualElement style="flex-direction: row; align-items: center; flex-grow: 1;">
+                <ui:TextField name="custom-search-field" class="asset-search-field" placeholder-text="Unity search string" style="flex-grow: 1;" />
+                <ui:Button name="search-help-button" text="i" class="search-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Description Section -->
+        <ui:Label text="Manage which assets appear in this sheet using the selected mode above." name="description-label" class="asset-description-label" />
+
+        <!-- Main List Section -->
+        <ui:VisualElement name="list-container" class="asset-list-container">
+            <ui:ListView
+                name="asset-list-view"
+                class="asset-list-view"
+                show-add-remove-footer="true"
+                reorderable="false" />
+        </ui:VisualElement>
+
+        <!-- Action Buttons -->
+        <ui:VisualElement name="action-buttons" class="asset-action-buttons">
+            <ui:Button text="Cleanup Deleted" name="cleanup-button" class="asset-action-button" />
+            <ui:Button text="Clear All" name="clear-all-button" class="asset-action-button asset-action-button--destructive" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

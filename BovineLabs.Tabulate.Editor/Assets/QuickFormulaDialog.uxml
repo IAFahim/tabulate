@@ -1,0 +1,30 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.bovinelabs.tabulate/BovineLabs.Tabulate.Editor/Assets/QuickFormulaDialog.uss" />
+    
+    <ui:VisualElement name="root-container" class="quick-formula-root">
+        <!-- Title Section -->
+        <ui:Label name="title-label" text="Apply Formula to Column" class="quick-formula-title" />
+        
+        <!-- Description Section -->
+        <ui:Label name="description-label" text="Enter a formula to apply to all rows in this column. Use C0, C1, etc. to reference other columns." class="quick-formula-description" />
+        
+        <!-- Formula Input Section -->
+        <ui:VisualElement name="formula-input-container" class="quick-formula-input-container">
+            <!-- FormulaInputField will be added programmatically -->
+        </ui:VisualElement>
+        
+        <!-- Preview Section -->
+        <ui:VisualElement name="preview-section" class="quick-formula-preview-section">
+            <ui:Label name="preview-label" text="Preview (first 5 rows):" class="quick-formula-preview-title" />
+            <ui:VisualElement name="preview-container" class="quick-formula-preview-container">
+                <!-- Preview content will be populated programmatically -->
+            </ui:VisualElement>
+        </ui:VisualElement>
+        
+        <!-- Button Container -->
+        <ui:VisualElement name="button-container" class="quick-formula-button-container">
+            <ui:Button name="cancel-button" text="Cancel" class="quick-formula-button quick-formula-cancel-button" />
+            <ui:Button name="apply-button" text="Apply" class="quick-formula-button quick-formula-apply-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,109 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.bovinelabs.tabulate/BovineLabs.Tabulate.Editor/Assets/SheetConfigurationDialog.uss" />
+
+    <ui:VisualElement name="root-container" class="column-config-root">
+        <!-- Tab Headers -->
+        <ui:VisualElement name="tab-headers" class="column-config-tab-headers">
+            <ui:Button text="Columns" name="columns-tab-button" class="column-config-tab-button column-config-tab-button--active" />
+            <ui:Button text="Variables" name="variables-tab-button" class="column-config-tab-button" />
+            <ui:Button text="Assets" name="assets-tab-button" class="column-config-tab-button" />
+        </ui:VisualElement>
+
+        <!-- Columns Tab Content -->
+        <ui:VisualElement name="columns-tab-content" class="column-config-tab-content">
+            <!-- Left Panel - Column List -->
+            <ui:VisualElement name="left-panel" class="column-config-left-panel">
+                <ui:Label text="Columns" name="left-title" class="column-config-title" />
+                <ui:ListView name="column-list-view" class="column-config-list" reorderable="true" show-add-remove-footer="true" />
+            </ui:VisualElement>
+
+            <!-- Right Panel - Column Details -->
+            <ui:VisualElement name="right-panel" class="column-config-right-panel">
+                <ui:Label text="Column Details" name="right-title" class="column-config-title" />
+
+                <ui:VisualElement name="details-panel" class="column-config-details">
+                    <!-- No Selection State -->
+                    <ui:Label text="Select a column to edit its properties" name="no-selection-label" class="column-config-no-selection" />
+
+                    <!-- Details Form -->
+                    <ui:VisualElement name="details-form" class="column-config-details-form">
+                        <ui:TextField label="Display Name" name="display-name-field" />
+                        <uie:EnumField label="Column Type" name="column-type-field" type="BovineLabs.Tabulate.Editor.Core.ColumnType, BovineLabs.Tabulate.Editor" />
+
+                        <!-- Target Type Selection -->
+                        <ui:TextField label="Target Type" name="target-type-field" />
+
+                        <!-- Property Path -->
+                        <ui:DropdownField label="Property Path" name="property-dropdown" />
+                        <ui:TextField label="Custom Property Path" name="property-path-field" class="config-property-path-field--hidden" />
+
+                        <!-- Formula -->
+                        <ui:TextField label="Formula" name="formula-field" class="config-formula-field--hidden" />
+
+                        <!-- General Options -->
+                        <ui:Toggle label="Disable Inspector" name="disable-inspector-toggle" />
+                        <ui:Toggle label="Read Only" name="readonly-toggle" />
+
+                        <!-- Data Column Fields -->
+                        <uie:EnumField label="Data Field Type" name="data-field-type-field" type="BovineLabs.Tabulate.Editor.Core.DataFieldType, BovineLabs.Tabulate.Editor" class="config-data-field--hidden" />
+                        <!-- data-value-field will be created dynamically based on DataFieldType -->
+                        <ui:Toggle label="Use Slider" name="use-slider-toggle" class="config-data-field--hidden" />
+                        <ui:FloatField label="Min Value" name="min-value-field" class="config-data-field--hidden" />
+                        <ui:FloatField label="Max Value" name="max-value-field" class="config-data-field--hidden" />
+
+                        <!-- Validation Summary -->
+                        <ui:Label name="validation-summary-label" class="validation-summary-error" style="display: none;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Variables Tab Content -->
+        <ui:VisualElement name="variables-tab-content" class="column-config-tab-content column-config-tab-content--hidden">
+            <!-- Left Panel - Variable List -->
+            <ui:VisualElement name="variables-left-panel" class="column-config-left-panel">
+                <ui:Label text="Variables" name="variables-left-title" class="column-config-title" />
+                <ui:ListView name="variable-list-view" class="column-config-list" reorderable="true" show-add-remove-footer="true" />
+            </ui:VisualElement>
+
+            <!-- Right Panel - Variable Details -->
+            <ui:VisualElement name="variables-right-panel" class="column-config-right-panel">
+                <ui:Label text="Variable Details" name="variables-right-title" class="column-config-title" />
+
+                <ui:VisualElement name="variable-details-panel" class="column-config-details">
+                    <!-- No Selection State -->
+                    <ui:Label text="Select a variable to edit its properties" name="variable-no-selection-label" class="column-config-no-selection" />
+
+                    <!-- Variable Details Form -->
+                    <ui:VisualElement name="variable-details-form" class="column-config-details-form">
+                        <ui:TextField label="Display Name" name="variable-display-name-field" />
+                        <uie:EnumField label="Variable Type" name="variable-type-field" type="BovineLabs.Tabulate.Editor.Variables.VariableType, BovineLabs.Tabulate.Editor" />
+
+                        <!-- Data Variable Fields -->
+                        <uie:EnumField label="Data Type" name="variable-data-type-field" type="BovineLabs.Tabulate.Editor.Core.DataFieldType, BovineLabs.Tabulate.Editor" class="config-data-field--hidden" />
+                        <!-- variable-data-value-field will be created dynamically based on DataType -->
+
+                        <!-- Property Variable Fields -->
+                        <uie:ObjectField label="Target Object" name="variable-target-object-field" class="config-property-field--hidden" />
+                        <ui:TextField label="Target Type" name="variable-target-type-field" class="config-property-field--hidden" />
+                        <ui:DropdownField label="Property Path" name="variable-property-dropdown" />
+                        <ui:TextField label="Property Path" name="variable-property-path-field" class="config-property-path-field--hidden" />
+
+                        <!-- Formula Variable Fields -->
+                        <ui:TextField label="Formula" name="variable-formula-field" class="config-formula-field--hidden" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Assets Tab Content -->
+        <ui:VisualElement name="assets-tab-content" class="column-config-tab-content column-config-tab-content--hidden">
+            <!-- Asset management panel will be added here programmatically -->
+        </ui:VisualElement>
+
+        <!-- Bottom Buttons -->
+        <ui:VisualElement name="bottom-container" class="column-config-bottom-container">
+            <ui:Button text="Save" name="save-button" class="column-config-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
